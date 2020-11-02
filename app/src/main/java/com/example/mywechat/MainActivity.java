@@ -6,13 +6,22 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 
 import android.os.Bundle;
+
+
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import java.util.ArrayList;
+import java.util.List;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private static final String TAG = MainActivity.class.getSimpleName();
+    private List<String>list=new ArrayList<>();
 
     private LinearLayout mTabweixin;
     private LinearLayout mTabfrd;
@@ -42,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initEvent();
         initFragment();
         selectfragment(0);
+
     }
 
     private void initFragment(){
